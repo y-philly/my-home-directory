@@ -15,6 +15,7 @@ if dein#load_state('~/.cache/dein')
   endif
 
   call dein#add('tomasiser/vim-code-dark')
+  call dein#add('tpope/vim-fugitive')
 
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
@@ -30,9 +31,14 @@ if has("win64")
   set shell=cmd.exe
 endif
 
+let g:python3_host_prog = 'C:\Users\'.$USER.'\scoop\apps\anaconda3\current\pythonw.exe'
+
+let g:deoplete#enable_at_startup = 1
+
 colorscheme codedark
 
 " airline
+"
 let g:airline_theme='papercolor'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}

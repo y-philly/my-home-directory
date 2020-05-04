@@ -1,1 +1,1 @@
-:Guifont! Ricty\ Diminished\ Discord:h12
+:Guifont! Ricty\ Diminished\ Discord\ for Powerline:h12

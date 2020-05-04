@@ -1,5 +1,6 @@
 /.cache/*
 /repos/
+/.ssh/
 
 .*_history
 .viminfo

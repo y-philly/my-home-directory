@@ -46,7 +46,7 @@ set nu
 set ve+=block
 set ic
 set scs
-let mapleader = '\<Space>'
+let mapleader = "\<Space>"
 
 "" python path
 "
@@ -89,3 +89,10 @@ let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts = 1
 set laststatus=2
 
+"" FZF
+"
+let g:fzf_tags_command = 'ctags -R'
+nnoremap <silent> <leader>f :Files<cr>
+nnoremap <silent> <leader>h :History<cr>
+nnoremap <silent> <leader>t :Tags<cr>
+nnoremap <C-G> :Rg <C-R>=expand("<cword>")<cr>

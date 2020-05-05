@@ -14,6 +14,13 @@ if dein#load_state('~/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
 
+  call dein#add('fatih/vim-go')
+
+  call dein#add('houtsnip/vim-emacscommandline')
+
+  call dein#add('junegunn/fzf', { 'merged': 0 })
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf'})
+
   call dein#add('tomasiser/vim-code-dark')
   call dein#add('tpope/vim-fugitive')
 
@@ -31,10 +38,28 @@ if has("win64")
   set shell=cmd.exe
 endif
 
-let g:python3_host_prog = 'C:\Users\'.$USER.'\scoop\apps\anaconda3\current\pythonw.exe'
+"" basic settings
+"
+set nobk
+set nowrap
+set nu
+set ve+=block
+set ic
+set scs
+let mapleader = '\<Space>'
 
+"" python path
+"
+if has("win64")
+  let g:python3_host_prog = 'C:\Users\'.$USER.'\scoop\shims\python.exe'
+endif
+
+"" deoplete
+"
 let g:deoplete#enable_at_startup = 1
 
+"" Visual Studio Code like color scheme
+"
 colorscheme codedark
 
 " airline
@@ -63,3 +88,4 @@ let g:airline_symbols.notexists = 'Ɇ'
 let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_powerline_fonts = 1
 set laststatus=2
+

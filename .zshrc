@@ -112,8 +112,9 @@ alias cd-git-root="cd `git rev-parse --show-toplevel`"
 
 case "${OSTYPE}" in
 msys)
-    alias x="start"
-    ;;
+  alias x="start"
+  alias nvim="nvim-qt"
+  ;;
 esac
 
 ## ls color

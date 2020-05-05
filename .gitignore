@@ -4,3 +4,5 @@
 
 .*_history
 .viminfo
+
+.zcompdump

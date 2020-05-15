@@ -20,6 +20,8 @@ if dein#load_state('~/.cache/dein')
 
   call dein#add('houtsnip/vim-emacscommandline')
 
+  call dein#add('majutsushi/tagbar')
+
   call dein#add('junegunn/fzf', { 'merged': 0 })
   call dein#add('junegunn/fzf.vim', { 'depends': 'fzf'})
 
@@ -172,3 +174,9 @@ nnoremap <silent> <leader>f :Files<cr>
 nnoremap <silent> <leader>h :History<cr>
 nnoremap <silent> <leader>t :Tags<cr>
 nnoremap <C-G> :Rg <C-R>=expand("<cword>")<cr>
+
+"" Tagbar
+"
+nnoremap <silent> <F8> :TagbarToggle<cr>
+let g:tagbar_left = 1
+let g:tagbar_sort = 0
